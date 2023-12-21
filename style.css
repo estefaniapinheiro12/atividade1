@@ -1,0 +1,164 @@
+body {
+    background: linear-gradient(to right, #001119, #190019); /* Cores de fundo do body */
+    margin: 0;
+    padding: 0;
+    font-family: 'Verdana, Geneva, Tahoma, sans-serif';
+}
+
+header, footer {
+    position: relative;
+    background-color: #190019;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1; 
+}
+
+
+header i {
+    color: #fff; /* Cor desejada para o ícone */
+    font-size: 1.5em;
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.1) 50%, rgba(255, 255, 255, 0) 100%);
+    z-index: -1;
+    animation: lightAnimation 5s linear infinite; /* Defina a animação */
+}
+
+.menu {
+    display: none;
+    cursor: pointer;   
+}
+
+.menu div {
+    width: 32px;
+    height: 2px;
+    background: #fff;
+    margin: 8px;
+   
+}
+ul{
+    margin: 0;
+    padding: 0;
+    display: flex;
+
+}
+ul li 
+{
+    list-style: none;
+    color: #484848;
+    font-size: 20px;
+    letter-spacing: 15px;
+    animation: lighting 1.4s linear infinite;
+}
+
+@keyframes lighting 
+{
+	0% {
+		color: #fff;
+		text-shadow: none;
+	}
+
+	90% {
+		color: #fff;
+		text-shadow: none;
+	}
+
+	100% {
+		color: #61058b;
+		text-shadow: 0 0 7px #fff, 0 0 50px #e5e7e9;
+	}
+}
+
+ul li:nth-child(1) 
+{
+	animation-delay: 0
+}
+
+ul li:nth-child(2) 
+{
+	animation-delay: 0.1s
+}
+
+ul li:nth-child(3) 
+{
+	animation-delay: 0.2s
+}
+
+ul li:nth-child(4) 
+{
+	animation-delay: 0.3s
+}
+
+ul li:nth-child(5) 
+{
+	animation-delay: 0.4s
+}
+
+ul li:nth-child(6) 
+{
+	animation-delay: 0.5s
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 2;
+}
+
+#main-content {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.hidden {
+    display: none;
+}
+
+button {
+    transition: 1s ease-in;
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 15px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+    color: #e5e5e5;
+    box-shadow: inset -10.5em 0 0 0 #190019,
+    inset 10.5em 0 0 0 #190019;
+}
+
+
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
